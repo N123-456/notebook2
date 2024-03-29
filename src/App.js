@@ -1,18 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
-import noteContext from "./context/notes/noteContext";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NoteState from "./context/notes/NoteState";
 import Notes from "./components/Notes";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <>
       <NoteState>
         <Router>
-          <Navbar />
+          <Navbar/>
+          
           <div className="container">
           <Routes>
             <Route path="/" element={<Home/>} />

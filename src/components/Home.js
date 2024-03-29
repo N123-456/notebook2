@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-
 const Home = () => {
+  
   return (
-    <div>
+    <div className='container my-3'>
     <h2>Add a note</h2>
     <div className="container my-3">
     <form className="my-3"> 
@@ -22,7 +22,7 @@ const Home = () => {
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
-<h2>your Note</h2>
+ 
     </div>
   );
 }
