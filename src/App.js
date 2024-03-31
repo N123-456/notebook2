@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NoteState from "./context/notes/NoteState";
 import Notes from "./components/Notes";
 import Navbar from "./components/Navbar";
-
+import AddNote from "./components/AddNote";
+//import Alert from "./components/Alert";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           </div>
         </Router>
         <Notes/>
+        {/* <Alert/> */}
       </NoteState>
      
     </>

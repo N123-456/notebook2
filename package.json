@@ -2,6 +2,7 @@
   "name": "notebook2",
   "version": "0.1.0",
   "private": true,
+ 
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,6 +20,7 @@
     "eject": "react-scripts eject",
     "both": "concurrently \"npm run start\"  \"nodemon backend/index.js\""
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
