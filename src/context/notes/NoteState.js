@@ -5,7 +5,7 @@ import myContext from "./noteContext";
 import NoteItem from "../../components/NoteItem";
 
 const NoteState = (props) => {
- 
+ const host="http://localhost:5000"
   const notesInitial=[
     {
     "id":"1",
@@ -50,13 +50,27 @@ const NoteState = (props) => {
     setNotes(newNotes)
   }
   //Edit a note
-  const editNote=(id,title,description,uniname)=>{
+  // const editNote=async (id,title,description,uniname)=>{
+  //   async function logMovies() {
+  //     const response = await fetch("http://example.com/movies.json");
+  //     const movies = await response.json();
+  //     console.log(movies);
+  //   }
     
-  }
+  // for (let index = 0; index < notes.length; index++) {
+  //   const element = array[index];
+  //   if(element.id===id){
+  //     element.title=title;
+  //     element.description=description;
+  //     element.uniname=uniname;
+  //   }
+    
+  
+  
   return (
-    <myContext.Provider value={{notes,addNote,deleteNote,editNote}}>
+    <myContext.Provider value={{notes,addNote,deleteNote}}>
     {props.children}
     </myContext.Provider>
   );
-};
+  }
 export default NoteState;

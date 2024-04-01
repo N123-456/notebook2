@@ -10,6 +10,9 @@ const Notes = () => {
     <AddNote/>
     <div className="row my-3">
         <h2>Your Notes</h2>
+        <div className="container">
+        {notes.length===0 && 'No notes to display</div>'}
+        </div>
         {notes?.map((note) => (
             <NoteItem key={note.id} note={note} />
         ))}
