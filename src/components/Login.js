@@ -1,9 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import AddNote from './AddNote';
+import myContext from '../context/notes/noteContext';
 const Login = (e) => {
+  const {notes}=useContext(myContext)
     const [credentials,setCredentials]=useState({email:"",password:""})
-    const [password,setPassword]=useState("")
-
+    const user = notes.find((note) => note.email === email && note.password === password);
     const handleSubmit=async (e)=>{
         e.preventDefault();
         const response = await fetch("http://localhost:5000/api/auth/login", {

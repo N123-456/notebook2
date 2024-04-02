@@ -5,7 +5,6 @@ import myContext from "./noteContext";
 import NoteItem from "../../components/NoteItem";
 
 const NoteState = (props) => {
- const host="http://localhost:5000"
   const notesInitial=[
     {
     "id":"1",
@@ -26,9 +25,15 @@ const NoteState = (props) => {
         "description":"Hello Rida speaking from National university of modern languages"
         }
           ];
+          const arr=[];
+          const storeData = (data) => {
+            console.log("data is :",data)
+            setNotes([data]);
+          };
+          console.log(storeData)
   
-  const [notes,setNotes]=useState(notesInitial)
-
+  const [notes,setNotes]=useState(arr)
+console.log(arr)
   //add a note
   const addNote=(title,description,uniname)=>{
     console.log("adding a new note")
@@ -43,13 +48,13 @@ const NoteState = (props) => {
     };
   setNotes(notes.concat(note))
   }
-  //delete a note
+                                        //delete a note
   const deleteNote=(id)=>{
     console.log("deleting the node with id:"+id)
     const newNotes=notes.filter((note)=>{return note.id!==id})
     setNotes(newNotes)
   }
-  //Edit a note
+                                           //Edit a note
   // const editNote=async (id,title,description,uniname)=>{
   //   async function logMovies() {
   //     const response = await fetch("http://example.com/movies.json");
@@ -68,7 +73,7 @@ const NoteState = (props) => {
   
   
   return (
-    <myContext.Provider value={{notes,addNote,deleteNote}}>
+    <myContext.Provider value={{notes,storeData}}>
     {props.children}
     </myContext.Provider>
   );
