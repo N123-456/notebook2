@@ -3,13 +3,12 @@ import myContext from '../context/notes/noteContext';
 
 const Signup = () => {
   const {storeData}=useContext(myContext)
-    const [credentials,setCredentials]=useState(
-      {name:"",email:"",password:""})
+    const [credentials,setCredentials]=useState([
+      {name:"",email:"",password:""}])
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        const newUser = { ...credentials };
-        storeData(newUser);
+        storeData(credentials);
       
     }
     const onChange=(e)=>{

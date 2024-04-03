@@ -3,7 +3,7 @@ import Notes from "../../components/Notes";
 import Home from "../../components/Home";
 import myContext from "./noteContext";
 import NoteItem from "../../components/NoteItem";
-
+import Login from "../../components/Login";
 const NoteState = (props) => {
   const notesInitial=[
     {
@@ -30,7 +30,7 @@ const NoteState = (props) => {
             console.log("data is :",data)
             setNotes([data]);
           };
-          console.log(storeData)
+          
   
   const [notes,setNotes]=useState(arr)
 console.log(arr)
