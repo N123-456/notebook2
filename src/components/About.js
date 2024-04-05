@@ -8,7 +8,10 @@ const About = () => {
   return (
    <>
     <h1>user details</h1>
-    <h2>user detail is: {notes.name}</h2>
+   
+   <h2>{notes.name}</h2>
+   <h2>{notes.email}</h2>
+   <h2>{notes.password}</h2>
    </>
   );
 };
