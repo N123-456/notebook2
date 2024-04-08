@@ -7,10 +7,12 @@ import NoteState from "./context/notes/NoteState";
 import Notes from "./components/Notes";
 import Navbar from "./components/Navbar";
 import AddNote from "./components/AddNote";
-import memo from "./memofunction/memo";
 //import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Memos from "./memofunction/Memos";
+import Parent from "./memofunction/Parent";
+
 function App() {
   return (
     <>
@@ -22,7 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<AddNote/>} />
             <Route path="about/" element={<About/>} />
-            <Route path="memo/" element={<memo/>} />
+            <Route path="memo/" element={<Memos/>} />
+            <Route path="/parent" element={<Parent/>} />
             <Route path="signup/" element={<Signup />} />
             <Route path="login/" element={<Login/>} />
            
