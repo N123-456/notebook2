@@ -1,16 +1,20 @@
-import React,{useState} from 'react';
+import React,{useState,useCallback} from 'react';
 import Child from './Child';
 const Parent = () => {
-    const [counterOne,setCounterOne]=useState(0);
-const IncrementOne=()=>{
-    setCounterOne(counterOne+1)
-    }
+  const [count, setCount] = useState(0);
+
+  // Memoize the increment function
+  const increment = useCallback(() => {
+    setCount(count + 1);
+  }, [count]); // Recreate the function only if count changes
+    
   return (
     <div>
-    <Child/>
-      <button onClick={IncrementOne}>Counter -{counterOne}</button>
+     <p>Count: {count}</p>
+      <Child onIncrement={increment}/>
+ 
     </div>
   );
-}
 
+}
 export default Parent;
